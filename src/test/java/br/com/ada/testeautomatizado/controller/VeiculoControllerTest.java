@@ -92,7 +92,7 @@ class VeiculoControllerTest {
                 .andDo(print())
                 .andReturn();
 
-        String responseExpected = mapper.writeValueAsString(new ResponseDTO<VeiculoDTO>("CPF inválido!", null));
+        String responseExpected = mapper.writeValueAsString(new ResponseDTO<VeiculoDTO>("Placa invalida!", null));
 
         Assertions.assertEquals(responseExpected, mvcResult.getResponse().getContentAsString());
 
